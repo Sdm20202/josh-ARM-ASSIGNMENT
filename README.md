@@ -234,3 +234,78 @@ Through this project, I learned how to:
 ## Conclusion
 
 This project demonstrates how Azure Resource Manager templates can automate cloud infrastructure deployment. Using ARM templates improves consistency, reduces manual configuration, and simplifies Azure resource management.
+{
+    "apiVersion": "2025-04-01",
+    "id": "/subscriptions/3c711d96-fa08-4238-9568-38f3db39c7c5/resourceGroups/JOSH-RG/providers/Microsoft.Compute/virtualMachines/JOSH-VM",
+    "name": "JOSH-VM",
+    "type": "microsoft.compute/virtualmachines",
+    "location": "eastus",
+    "zones": [
+        "2"
+    ],
+    "properties": {
+        "hardwareProfile": {
+            "vmSize": "Standard_D2s_v3"
+        },
+        "provisioningState": "Succeeded",
+        "vmId": "b4894618-3338-49d4-90dd-eeb64b33c8ec",
+        "additionalCapabilities": {
+            "hibernationEnabled": false
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "canonical",
+                "offer": "ubuntu-24_04-lts",
+                "sku": "server",
+                "version": "latest",
+                "exactVersion": "24.04.202606060"
+            },
+            "osDisk": {
+                "osType": "Linux",
+                "name": "JOSH-VM_OsDisk_1_2c613353a4904cc3b75912ecf16cec64",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "managedDisk": {
+                    "storageAccountType": "Premium_LRS",
+                    "id": "/subscriptions/3c711d96-fa08-4238-9568-38f3db39c7c5/resourceGroups/JOSH-RG/providers/Microsoft.Compute/disks/JOSH-VM_OsDisk_1_2c613353a4904cc3b75912ecf16cec64"
+                },
+                "deleteOption": "Delete",
+                "diskSizeGB": 30
+            },
+            "dataDisks": [],
+            "diskControllerType": "SCSI"
+        },
+        "osProfile": {
+            "computerName": "JOSH-VM",
+            "linuxConfiguration": {
+                "disablePasswordAuthentication": false,
+                "provisionVMAgent": true,
+                "patchSettings": {
+                    "patchMode": "ImageDefault",
+                    "assessmentMode": "ImageDefault"
+                }
+            },
+            "secrets": [],
+            "allowExtensionOperations": true,
+            "requireGuestProvisionSignal": true,
+            "adminUsername": "sdglobal"
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/3c711d96-fa08-4238-9568-38f3db39c7c5/resourceGroups/JOSH-RG/providers/Microsoft.Network/networkInterfaces/josh-vm836_z2",
+                    "properties": {
+                        "deleteOption": "Delete"
+                    }
+                }
+            ]
+        },
+        "diagnosticsProfile": {
+            "bootDiagnostics": {
+                "enabled": true
+            }
+        },
+        "timeCreated": "2026-07-02T21:06:04.97Z"
+    },
+    "etag": "\"2\""
+}
